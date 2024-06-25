@@ -1,27 +1,14 @@
 package com.example.ms.ingress.spring.service;
 
-import org.springframework.beans.factory.annotation.Autowired;
+import lombok.AllArgsConstructor;
+import lombok.ToString;
 import org.springframework.stereotype.Service;
 
 @Service
+@ToString
+@AllArgsConstructor
 public class Car {
     private final Engine engine;
     private final Seat seat;
     private final Tire tire;
-
-    @Autowired
-    public Car(Engine engine, Seat seat, Tire tire) {
-        this.engine = engine;
-        this.seat = seat;
-        this.tire = tire;
-    }
-
-    @Override
-    public String toString() {
-        return "Car{" +
-                "engine=" + engine +
-                ", seat=" + seat +
-                ", tire=" + tire +
-                '}';
-    }
 }
